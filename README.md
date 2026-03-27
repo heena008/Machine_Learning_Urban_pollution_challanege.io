@@ -1,23 +1,4 @@
-[![Shipping files](https://github.com/neuefische/ds-random-forest/actions/workflows/workflow-02.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/neuefische/ds-random-forest/actions/workflows/workflow-02.yml)
 
-# Random Forest
-
-In this repo we will have a look at various topics related to random forest.
-
-
-### The way to success:
-
-Please work in pairs through all the notebooks in this particular order:
-
-
-1. [Random Forest Sklearn](1_Random_Forest_Codealong.ipynb)
-2. [Random Forest Tutorial](2_Random_Forest_Tutorial.ipynb)
-3. [Random Forest Exercise](3_Random_Forest_Exercise.ipynb)
-
-The first notebook will show you how to implement
-Random Forest with sklearn.
-In the second notebook, Decision Trees and Random Forests are compared.
-In the third notebook you can apply the random forest algorithm on Lending Club Data.
 
 ## Set up your Environment
 
