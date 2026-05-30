@@ -16,8 +16,7 @@ A Python  machine learning models for urban PM2.5 air quality prediction based o
 
 ---
 
-## Overview
-:
+## Overview:
 
  **PM2.5 Prediction** — Machine learning models (Random Forest, XGBoost, Gradient Boosting) trained to forecast urban fine particulate matter (PM2.5) concentrations using meteorological and emissions data.
 
