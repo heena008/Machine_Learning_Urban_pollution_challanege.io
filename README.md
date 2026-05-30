@@ -74,59 +74,6 @@ Predictions are mapped to standard AQI bands:
 
 ---
 
-## Installation
-
-```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-pip install -r requirements.txt
-```
-
-**Key dependencies:**
-
-- `scikit-learn`
-- `xgboost`
-- `pandas`
-- `numpy`
-- `matplotlib`
-
----
-
-## Usage
-
-```python
-
-
-# PM2.5 prediction (example after training)
-import xgboost as xgb
-model = xgb.XGBRegressor()
-model.load_model("models/xgboost_pm25.json")
-prediction = model.predict(X_test)
-```
-
----
-
-## Model Performance
-
-### PM2.5 Models (Training Metrics)
-
-| Model             | RMSE  | MAE   | R²   |
-|-------------------|-------|-------|------|
-| Rolling Mean      | 28.04 | —     | —    |
-| Linear Regression (extended baseline) | 25.18 | 15.77 | 0.71 |
-| Random Forest     | 15.53 | 11.10 | 0.89 |
-| Gradient Boosting | 29.70 | 21.39 | 0.60 |
-| **XGBoost**       | **13.41** | **9.57** | **0.92** |
-
-XGBoost achieved the best performance across all metrics, benefiting from its sequential boosting approach, nonlinearity handling, and robustness to rare pollution events.
-
----
-
-## References
-
-1. V. T. T. Minh et al., "PM2.5 Forecast System by Using Machine Learning and WRF Model," *Aerosol and Air Quality Research*, vol. 21, 2021.
-2. A. Engels et al. (eds.), *Hamburg Climate Futures Outlook 2023*, Cluster of Excellence CLICCS, Hamburg, 2023.
-
 
 ## Set up your Environment
 
@@ -183,4 +130,41 @@ The data used in this notebook is saved in a `.zip` file. To unzip it, copy the 
 ```Bash
 unzip data.zip
 ```
+
+
+
+## Usage
+
+```python
+
+
+# PM2.5 prediction (example after training)
+import xgboost as xgb
+model = xgb.XGBRegressor()
+model.load_model("models/xgboost_pm25.json")
+prediction = model.predict(X_test)
+```
+
+---
+
+## Model Performance
+
+### PM2.5 Models (Training Metrics)
+
+| Model             | RMSE  | MAE   | R²   |
+|-------------------|-------|-------|------|
+| Rolling Mean      | 28.04 | —     | —    |
+| Linear Regression (extended baseline) | 25.18 | 15.77 | 0.71 |
+| Random Forest     | 15.53 | 11.10 | 0.89 |
+| Gradient Boosting | 29.70 | 21.39 | 0.60 |
+| **XGBoost**       | **13.41** | **9.57** | **0.92** |
+
+XGBoost achieved the best performance across all metrics, benefiting from its sequential boosting approach, nonlinearity handling, and robustness to rare pollution events.
+
+---
+
+## References
+
+1. V. T. T. Minh et al., "PM2.5 Forecast System by Using Machine Learning and WRF Model," *Aerosol and Air Quality Research*, vol. 21, 2021.
+2. A. Engels et al. (eds.), *Hamburg Climate Futures Outlook 2023*, Cluster of Excellence CLICCS, Hamburg, 2023.
 
